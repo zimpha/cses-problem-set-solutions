@@ -45,7 +45,7 @@ fn main() {
     let sum: i64 = a.iter().sum();
     let mut stk = Vec::new();
     let mut m = 0;
-    
+
     for x in a {
         m += 1;
         stk.push(x);

@@ -50,7 +50,9 @@ fn main() {
     let mut dp = vec![0; n];
     for i in 0..n {
         let st = movies[i].1;
-        let index = movies.binary_search(&(st - 1, st - 1, std::u64::MAX)).unwrap_or_else(|x| x);
+        let index = movies
+            .binary_search(&(st - 1, st - 1, std::u64::MAX))
+            .unwrap_or_else(|x| x);
         if index > 0 {
             dp[i] = dp[index - 1] + movies[i].2;
         } else {
